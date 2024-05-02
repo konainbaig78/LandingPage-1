@@ -1,307 +1,325 @@
 :root {
-    --text-color: hsla(210, 50%, 85%, 1);
-    --shadow-color: hsla(210, 40%, 52%, .4);
-    --btn-color: hsl(210, 80%, 42%);
-    --bg-color: #141218;
-  }
+  --text-color: hsla(210, 50%, 85%, 1);
+  --shadow-color: hsla(210, 40%, 52%, 0.4);
+  --btn-color: hsl(210, 80%, 42%);
+  --bg-color: #141218;
+}
 
-.hero{
-    background: linear-gradient(
-        180deg,
-        hsla(287, 70%, 31%, 0.393) 0%,
-        hsla(286, 45%, 37%, 0.523) 18%,
-        hsla(250, 43%, 49%, 0.553) 40%,
-        hsla(248, 43%, 50%, 0.559) 62%,
-        hsla(278, 61%, 35%, 0.425) 83%,
-        rgb(55,55,124) 100%),url(images/Image.svg) no-repeat;
-    background-position: center !important;
-    background-size: cover !important;
-    padding-bottom: 40px;
+.hero {
+  background: linear-gradient(
+      180deg,
+      hsla(287, 70%, 31%, 0.393) 0%,
+      hsla(286, 45%, 37%, 0.523) 18%,
+      hsla(250, 43%, 49%, 0.553) 40%,
+      hsla(248, 43%, 50%, 0.559) 62%,
+      hsla(278, 61%, 35%, 0.425) 83%,
+      rgb(55, 55, 124) 100%
+    ),
+    url(images/Image.svg) no-repeat;
+  background-position: center !important;
+  background-size: cover !important;
+  padding-bottom: 40px;
 }
-header{
-    padding-top: 3.5rem !important;
-    padding-bottom: 3.5rem;
+header {
+  padding-top: 3.5rem !important;
+  padding-bottom: 3.5rem;
 }
-nav{
-    position: relative;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+nav {
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
 }
-.nav-link{
-    transition: transform .5s ease;
+.nav-link {
+  transition: transform 0.5s ease;
 }
-.nav-link:hover{
+.nav-link:hover {
   background: #8000802b;
- 
-    transform: scale(1.1);
- 
-  
+
+  transform: scale(1.1);
 }
 
-
-.content{
-    margin: 0 17rem;
+.content {
+  margin: 0 17rem;
 }
-.content p{
-    font-size: 22px;
-    font-weight: 500;
+.content p {
+  font-size: 22px;
+  font-weight: 500;
 }
-.content h1{
-    font-size: 3.5rem;
-    margin-bottom: 3rem;
-    font-weight: 600;
+.content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
 }
-.content h6{
-   font-weight: 400;
-   font-size: 17px;
-   text-align: justify;
-   margin-bottom: 3rem;
-}
-.content button{
-    background: #482BE7;
-    color: white;
-    width: 179px;
-    height: 52px;
-    text-align: center;
-border: 0;
-margin-top: 4rem;
-cursor: pointer;
-
+.content h6 {
+  font-weight: 400;
+  font-size: 17px;
+  text-align: justify;
+  margin-bottom: 3rem;
 }
 .content button {
-    position:relative;
-    padding: 10px 20px;  
-    border: none;
-    background: #482BE7;
-    cursor: pointer;
-    
-    
-    font-weight: 500;
-    text-transform: uppercase;
-    font-size: 12px;  
-    color: white;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.514);
-   
-  
-    border-radius: 4px; 
-    z-index: 0;  
-    overflow: hidden;   
-  }
-  
-  button:focus {
-    outline-color: transparent;
-    box-shadow: var(--btn-color) 2px 2px 22px;
-  }
-  
-  .right::after, button::after {
-    content: var(--content);
-    display: block;
-    position: absolute;
-    white-space: nowrap;
-    padding: 40px 40px;
-    pointer-events:none;
-  }
-  
-  button::after{
-    font-weight: 200;
-    top: -30px;
-    left: -20px;
-  } 
-  
-  .right, .left {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-  }
-  .right {
-    left: 66%;
-  }
-  .left {
-    right: 66%;
-  }
-  .right::after {
-    top: -30px;
-    left: calc(-66% - 20px);
-    
-    background-color: var(--bg-color);
-    color:transparent;
-    transition: transform .4s ease-out;
-    transform: translate(0, -90%) rotate(0deg)
-  }
-  
-  button:hover .right::after {
-    transform: translate(0, -47%) rotate(0deg)
-  }
-  
-  button .right:hover::after {
-    transform: translate(0, -50%) rotate(-7deg)
-  }
-  
-  button .left:hover ~ .right::after {
-    transform: translate(0, -50%) rotate(7deg)
-  }
-  
-  /* bubbles */
-  button::before {
-    content: '';
-    pointer-events: none;
-    opacity: .6;
-    background:
-      radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
-      radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, var(--text-color) 3px, var(--text-color) 4px, transparent 4px),
-      radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, var(--text-color) 5px, var(--text-color) 6px, transparent 6px);
-  
-    width: 100%;
-    height: 300%;
-    top: 0;
-    left: 0;
-    position: absolute;
-    animation: bubbles 5s linear infinite both;
-  }
-  
-  @keyframes bubbles {
-    from {
-      transform: translate();
-    }
-    to {
-      transform: translate(0, -66.666%);
-    }
-  }
- /* bubbles end */
-.sec-a{
-    background:  url(images/cover.svg) !important;
-    background-color:   rgb(55, 55, 124)  !important;
-    background-position: center;
-    background-size: cover !important;
-    padding: 40px ;
+  background: #482be7;
+  color: white;
+  width: 179px;
+  height: 52px;
+  text-align: center;
+  border: 0;
+  margin-top: 4rem;
+  cursor: pointer;
 }
-.cont-a{
- padding: 138px 9rem;
- text-align: justify;
-}
-.cont-a p{
-    font-size: 22px;
-    font-weight: 500;
-    color: white;
-}
-.cont-a h1{
-    font-size: 3.5rem;
-    margin-bottom: 3rem;
-    font-weight: 600;
-    color: white;
-}
-.cont-a h6{
-   font-weight: 400;
-   font-size: 17px;
-   text-align: justify;
-   margin-bottom: 3rem;
-   color: white;
-}
-.sec-b{
-    background: linear-gradient(
-        180deg,
-        hsla(287, 70%, 31%, 0.393) 0%,
-        hsla(286, 45%, 37%, 0.523) 18%,
-        hsla(250, 43%, 49%, 0.553) 40%,
-        hsla(248, 43%, 50%, 0.559) 62%,
-        hsla(278, 61%, 35%, 0.425) 83%,
-        rgb(55,55,124) 100%),url(images/Rectangle.svg) no-repeat;
-    background-size: cover !important;
-    padding-bottom: 40px;
-}
-.cont-b{
-    width: 449px;
-    color: white;
-    margin-left: 6rem;
-    text-align: left;
-   
-}
-.cont-b+div{
-    margin-bottom: 2rem;
-}
-.h2-b{
-    font-size: 35px;
-    font-weight: 600;
-}
-#box-1{
-    width: 217px;
-    height: 186px;
-    color: white;
-    border: 1px solid white;
-    border-radius: 18px;
-    padding: 1rem;
-    width: 206px;
-    height: 207px;
-}
-#box-1, 
-#box-2 p{
-    font-size: 13px;
-    line-height: 25px;
-}
-#box-1 img{
-  margin-bottom: 1rem ;
- 
-}
-#box-2 img{
-    margin-bottom: 1rem;
+.content button {
+  position: relative;
+  padding: 10px 20px;
+  border: none;
+  background: #482be7;
+  cursor: pointer;
+
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.514);
+
+  border-radius: 4px;
+  z-index: 0;
+  overflow: hidden;
 }
 
-#box-2{
-    width: 217px;
-    height: 186px;
-    color: white;
-    border: 1px solid white;
-    border-radius: 18px;
-    padding: 1rem;
-    width: 206px;
-    height: 207px;
+button:focus {
+  outline-color: transparent;
+  box-shadow: var(--btn-color) 2px 2px 22px;
 }
 
-.mockup{
-    position: relative;
-    left: -7%;
-    width: 22rem;
-    margin-top: 9rem;
-}
-#pg1{
-    position: relative;
-    left: 461%;
-    top: -356%;
-}
-#form{
-    width: 409px;
-    height: 426px;
-    background: white;
-    border-radius:10px;
-    padding: 20px 25px;
+.right::after,
+button::after {
+  content: var(--content);
+  display: block;
+  position: absolute;
+  white-space: nowrap;
+  padding: 40px 40px;
+  pointer-events: none;
 }
 
-#form>form>h3{
-    color: #1E0E62;
-    padding-bottom: 2rem;
-    border-bottom: 2px solid #1E0E62;
+button::after {
+  font-weight: 200;
+  top: -30px;
+  left: -20px;
 }
-#form>form input{
-    border-radius: 40px;
-    width: 330px;
-    height: 50px;
-    border: 1px solid #d4d4d4;
+
+.right,
+.left {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
 }
-#email{
-    margin-top: 4rem;
-    margin-bottom: 2rem;
+.right {
+  left: 66%;
 }
-#email::placeholder{
-    padding: 2rem;
-    color: #d4d4d4;
-    font-size: 12px;
+.left {
+  right: 66%;
 }
-#pass::placeholder{
-    padding: 2rem;
-    color: #d4d4d4;
-    font-size: 12px;
+.right::after {
+  top: -30px;
+  left: calc(-66% - 20px);
+
+  background-color: var(--bg-color);
+  color: transparent;
+  transition: transform 0.4s ease-out;
+  transform: translate(0, -90%) rotate(0deg);
 }
-.btn-c{
+
+button:hover .right::after {
+  transform: translate(0, -47%) rotate(0deg);
+}
+
+button .right:hover::after {
+  transform: translate(0, -50%) rotate(-7deg);
+}
+
+button .left:hover ~ .right::after {
+  transform: translate(0, -50%) rotate(7deg);
+}
+
+/* bubbles */
+button::before {
+  content: "";
+  pointer-events: none;
+  opacity: 0.6;
+  background: radial-gradient(
+      circle at 20% 35%,
+      transparent 0,
+      transparent 2px,
+      var(--text-color) 3px,
+      var(--text-color) 4px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 75% 44%,
+      transparent 0,
+      transparent 2px,
+      var(--text-color) 3px,
+      var(--text-color) 4px,
+      transparent 4px
+    ),
+    radial-gradient(
+      circle at 46% 52%,
+      transparent 0,
+      transparent 4px,
+      var(--text-color) 5px,
+      var(--text-color) 6px,
+      transparent 6px
+    );
+
+  width: 100%;
+  height: 300%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  animation: bubbles 5s linear infinite both;
+}
+
+@keyframes bubbles {
+  from {
+    transform: translate();
+  }
+  to {
+    transform: translate(0, -66.666%);
+  }
+}
+/* bubbles end */
+.sec-a {
+  background: url(images/cover.svg) !important;
+  background-color: rgb(55, 55, 124) !important;
+  background-position: center;
+  background-size: cover !important;
+  padding: 40px;
+}
+.cont-a {
+  padding: 138px 9rem;
+  text-align: justify;
+}
+.cont-a p {
+  font-size: 22px;
+  font-weight: 500;
+  color: white;
+}
+.cont-a h1 {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  color: white;
+}
+.cont-a h6 {
+  font-weight: 400;
+  font-size: 17px;
+  text-align: justify;
+  margin-bottom: 3rem;
+  color: white;
+}
+.sec-b {
+  background: linear-gradient(
+      180deg,
+      hsla(287, 70%, 31%, 0.393) 0%,
+      hsla(286, 45%, 37%, 0.523) 18%,
+      hsla(250, 43%, 49%, 0.553) 40%,
+      hsla(248, 43%, 50%, 0.559) 62%,
+      hsla(278, 61%, 35%, 0.425) 83%,
+      rgb(55, 55, 124) 100%
+    ),
+    url(images/Rectangle.svg) no-repeat;
+  background-size: cover !important;
+  padding-bottom: 40px;
+}
+.cont-b {
+  width: 449px;
+  color: white;
+  margin-left: 6rem;
+  text-align: left;
+}
+.cont-b + div {
+  margin-bottom: 2rem;
+}
+.h2-b {
+  font-size: 35px;
+  font-weight: 600;
+}
+#box-1 {
+  width: 217px;
+  height: 186px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 18px;
+  padding: 1rem;
+  width: 206px;
+  height: 207px;
+}
+#box-1,
+#box-2 p {
+  font-size: 13px;
+  line-height: 25px;
+}
+#box-1 img {
+  margin-bottom: 1rem;
+}
+#box-2 img {
+  margin-bottom: 1rem;
+}
+
+#box-2 {
+  width: 217px;
+  height: 186px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 18px;
+  padding: 1rem;
+  width: 206px;
+  height: 207px;
+}
+
+.mockup {
+  position: relative;
+  left: -7%;
+  width: 22rem;
+  margin-top: 9rem;
+}
+#pg1 {
+  position: relative;
+  left: 461%;
+  top: -356%;
+}
+#form {
+  width: 409px;
+  height: 426px;
+  background: white;
+  border-radius: 10px;
+  padding: 20px 25px;
+}
+
+#form > form > h3 {
+  color: #1e0e62;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #1e0e62;
+}
+#form > form input {
+  border-radius: 40px;
+  width: 330px;
+  height: 50px;
+  border: 1px solid #d4d4d4;
+}
+#email {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+#email::placeholder {
+  padding: 2rem;
+  color: #d4d4d4;
+  font-size: 12px;
+}
+#pass::placeholder {
+  padding: 2rem;
+  color: #d4d4d4;
+  font-size: 12px;
+}
+.btn-c {
   background: rgb(37, 218, 197);
   color: white;
   width: 330px;
@@ -311,297 +329,299 @@ cursor: pointer;
   margin-top: 2rem;
 }
 .btn-e:hover {
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    perspective: 1000px;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
   }
-  
-  @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-    
-    30%, 50%, 70% {
-      transform: translate3d(-2px, 0, 0);
-    }
-    40%, 60% {
-      transform: translate3d(2px, 0, 0);
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(2px, 0, 0);
   }
 }
-.cont-c{
-    padding-right: 216px;
-   
+.cont-c {
+  padding-right: 216px;
 }
-.cont-c h1{
-    font-size: 51px;
-    margin-bottom: 3rem;
-    font-weight: 600;
-    color: white;
+.cont-c h1 {
+  font-size: 51px;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  color: white;
 }
-.cont-c p{
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
+.cont-c p {
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
 }
-.sec-c{
-    padding: 50px 40px  !important;
+.sec-c {
+  padding: 50px 40px !important;
 }
-.sec-d{
-    background: rgb(30, 14, 98);
-   padding: 50px;
+.sec-d {
+  background: rgb(30, 14, 98);
+  padding: 50px;
 }
-.happy{
-    color: white;
+.happy {
+  color: white;
 }
-.boxes{
-    margin-top: 5rem;
+.boxes {
+  margin-top: 5rem;
 }
-.card{
-    border: 1px solid white;
-   
-    justify-content: center;
-    background: transparent;
-    width: 470px;
-    height: 237px;
+.card {
+  border: 1px solid white;
+
+  justify-content: center;
+  background: transparent;
+  width: 470px;
+  height: 237px;
 }
-.card-img-top{
-    width: 87px;
-    margin-top: 49px;
-    margin-left: 17px;
+.card-img-top {
+  width: 87px;
+  margin-top: 49px;
+  margin-left: 17px;
 }
-.card-text{
-    color: white;
-    font-size: 14px;
+.card-text {
+  color: white;
+  font-size: 14px;
 }
-.card-body>h6{
-    font-weight: 400;
-    color:rgb(96, 87, 145);
-    letter-spacing: 5px;
-    font-size: 11px;
-    margin-bottom: 2rem;
+.card-body > h6 {
+  font-weight: 400;
+  color: rgb(96, 87, 145);
+  letter-spacing: 5px;
+  font-size: 11px;
+  margin-bottom: 2rem;
 }
-.sec-e{
-    background: url(images/Background.svg) no-repeat;
-    background-color: #030bcfc7 !important;
-    background-size: cover !important;
+.sec-e {
+  background: url(images/Background.svg) no-repeat;
+  background-color: #030bcfc7 !important;
+  background-size: cover !important;
   padding: 60px 395px;
 }
-.cont-e h1{
-    font-size: 51px;
-    margin-bottom: 3rem;
-    font-weight: 600;
-    color: white;
-    line-height: 30px;
+.cont-e h1 {
+  font-size: 51px;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  color: white;
+  line-height: 30px;
 }
-.cont-e p{
-    margin-top: 3rem;
-    font-size: 20px;
-    font-weight: 400;
-    color: white;
-    text-align: center;
+.cont-e p {
+  margin-top: 3rem;
+  font-size: 20px;
+  font-weight: 400;
+  color: white;
+  text-align: center;
 }
-.call{
-    margin-top: 3rem;
+.call {
+  margin-top: 3rem;
 }
-.btn-e{
-    background: rgb(37, 218, 197);
+.btn-e {
+  background: rgb(37, 218, 197);
   color: white;
   width: 162px;
   height: 50px;
   border-radius: 40px;
-  border:0;
+  border: 0;
+}
+.sec-f {
+  background: url(images/bg.svg);
+  background-color: #1b1c556b;
+  background-position: center !important;
+  background-size: cover !important;
+  padding: 40px;
+  padding-top: 75px;
+}
+.h1-f {
+  margin-bottom: 3rem;
+  font-weight: 600;
+  color: white;
+  line-height: 30px;
+}
+.btn-f {
+  border: 1px solid white;
+  background: transparent;
+  text-align: center;
+  width: 170px;
+  height: 40px;
+  color: white;
+  padding: 4px;
+}
+.title {
+  gap: 46rem;
+}
+.work-1 > img {
+  border-radius: 4px;
+}
+.work-1 {
+  color: white;
+}
+.cont-f > h1 {
+  font-weight: 700;
+}
+.contact p {
+  font-size: 13px;
+}
+.p-f {
+  margin-bottom: 4rem;
+}
+.cont-f {
+  padding-right: 10rem;
+}
+.cont-f > h1 {
+  margin-bottom: 2rem;
+}
+.cont-f div img {
+  margin-top: -17px;
+}
+.end {
+  background: #2f1893;
+  color: white;
+}
+body {
+  background: #2f1893;
+}
+/* media screen */
 
-}
-.sec-f{
-    background: url(images/bg.svg);
-    background-color: #1b1c556b;
-   background-position: center !important;
-   background-size: cover !important;
-    padding: 40px;
-    padding-top: 75px;
-}
-.h1-f{
-   
-    margin-bottom: 3rem;
-    font-weight: 600;
-    color: white;line-height: 30px;
-}
-.btn-f{
-    border: 1px solid white;
-    background: transparent;
-    text-align: center;
-    width: 170px;
-    height: 40px;
-    color: white;
-    padding: 4px;
-}
-.title{
-    gap: 46rem;
-}
-.work-1>img{
-    border-radius: 4px;
-}
-.work-1{
-    color: white;
-}
-.cont-f>h1{
-font-weight: 700;
-}
-.contact p{
-    font-size: 13px;
-}
-.p-f{
-    margin-bottom: 4rem;
-}
-.cont-f{
-    padding-right: 10rem;
-}
-.cont-f>h1{
-    margin-bottom: 2rem;
-}
-.cont-f div img{
-    margin-top: -17px;
-}
-.end{
-    background: #2F1893;
-    color: white;
-}
-body{
-    background: #2F1893;
-}
-  /* media screen */
-
-  @media screen and (max-width:480px){
-    .content{
-        margin: 0;
-    }
-    .cont-a{
-        padding:2rem 0;
-    }
-   
-  #pg1{
-    display: none !important;
+@media screen and (max-width: 480px) {
+  .content {
+    margin: 0;
   }
-  .mockup{
-    display:none;
-  }
-  .cont-b{
-    margin-left: 0;
-    width: none ;
-  }
-  .sec-b{
-    padding: 40px;
-  }
-  .cont-a h1{
-    font-size: 2.5rem !important;
-  }
-  .cont-c h1{
-    font-size: 2.5rem;
-  }
-  .content
-   h1{
-    font-size: 2.5rem !important;
-  }
-  .cont-a p{
-    font-size: 19px;
-    font-weight: 400;
-  }
-  .cont-c p{
-    font-size: 19px;
-    font-weight: 400;
-  }
-  .content p{
-    font-size: 19px;
-    font-weight: 400;
-  }
-  .cont-a h6{
-    font-size: 16px;
-    line-height: 25px;
-  } .content h6{
-    font-size: 16px;
-    line-height: 25px;
-  }
-  .cont-c{
-    padding-right: 0;
-  }
-  #form{
-    width: 340px;
-  }
-  .btn-c{
-    width: 311px;
-  }
-  #form>form input{
-    width: 311px;
-  }
- .card{
-    height: 290px;
- }
- .sec-e{
-    padding: 5rem 0;
- }
- .cont-f{
-    padding-right: 0;
- }
-  }
-
-  @media screen and (min-width:481px) and (max-width:768px){
-    .content{
-       margin-left: 0;
-       margin-right: 0;
-    }
-  .cont-a{
+  .cont-a {
     padding: 2rem 0;
   }
-  #pg1{
+
+  #pg1 {
+    display: none !important;
+  }
+  .mockup {
     display: none;
   }
-  .mockup{
+  .cont-b {
+    margin-left: 0;
+    width: none;
+  }
+  .sec-b {
+    padding: 40px;
+  }
+  .cont-a h1 {
+    font-size: 2.5rem !important;
+  }
+  .cont-c h1 {
+    font-size: 2.5rem;
+  }
+  .content h1 {
+    font-size: 2.5rem !important;
+  }
+  .cont-a p {
+    font-size: 19px;
+    font-weight: 400;
+  }
+  .cont-c p {
+    font-size: 19px;
+    font-weight: 400;
+  }
+  .content p {
+    font-size: 19px;
+    font-weight: 400;
+  }
+  .cont-a h6 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .content h6 {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  .cont-c {
+    padding-right: 0;
+  }
+  #form {
+    width: 340px;
+  }
+  .btn-c {
+    width: 311px;
+  }
+  #form > form input {
+    width: 311px;
+  }
+  .card {
+    height: 290px;
+  }
+  .sec-e {
+    padding: 5rem 0;
+  }
+  .cont-f {
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .cont-a {
+    padding: 2rem 0;
+  }
+  #pg1 {
     display: none;
   }
-  .cont-b{
+  .mockup {
+    display: none;
+  }
+  .cont-b {
     margin-left: 0;
     padding: 1rem;
   }
-  .cont-c{
+  .cont-c {
     padding-right: 0;
-    
   }
-  .sec-e{
+  .sec-e {
     padding: 8rem 2rem;
- }
- .cont-f{
-    padding-right: 0;
- }
   }
-  @media screen and (min-width:769px) and (max-width:992px){
-    .content{
+  .cont-f {
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .content {
     margin: 0 9rem;
-    }
-    .mockup{
-        display: none !important;
-    }
-  
- #pg1{
+  }
+  .mockup {
     display: none !important;
- }
- .for{
-    flex-direction: column!important;
- }
- .sec-e{
+  }
+
+  #pg1 {
+    display: none !important;
+  }
+  .for {
+    flex-direction: column !important;
+  }
+  .sec-e {
     padding: 8rem 11rem;
- }
- .cont-f{
+  }
+  .cont-f {
     padding-right: 0;
- }
   }
-  @media screen and (min-width:993px) and (maxx-width:1280px) {
-    .content{
-        margin: 0 9rem;
-        }
-        .sec-e{
-            padding: 8rem 0!important;
-         }
+}
+@media screen and (min-width: 993px) and (maxx-width: 1280px) {
+  .content {
+    margin: 0 9rem;
   }
+  .sec-e {
+    padding: 8rem 0 !important;
+  }
+}
